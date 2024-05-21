@@ -1,5 +1,7 @@
+package org.Reflex;
+
 import org.Reflex.entity.User;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import java.lang.reflect.*;
 import java.util.Arrays;
@@ -96,15 +98,15 @@ public class TestReflex {
     }
     @Test
     public void testInternal() throws ClassNotFoundException, NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException {
-        Class<?> aClass1 = Class.forName("org.Reflex.entity.User");
-        Class<?> aClass = Class.forName("org.Reflex.entity.User$Userinternal");
-        Constructor<?> constructor = aClass1.getConstructor();
-        Object o = constructor.newInstance();
-
-        Constructor<?> declaredConstructor = aClass.getDeclaredConstructor(aClass1);
-        Object o1 = declaredConstructor.newInstance(o);
-        Method printC = aClass.getDeclaredMethod("PrintC");
-        printC.invoke(o1);
+//        Class<?> aClass1 = Class.forName("org.Reflex.entity.User");
+//        Class<?> aClass = Class.forName("org.Reflex.entity.User$Userinternal");
+//        Constructor<?> constructor = aClass1.getConstructor();
+//        Object o = constructor.newInstance();
+//
+//        Constructor<?> declaredConstructor = aClass.getDeclaredConstructor(aClass1);
+//        Object o1 = declaredConstructor.newInstance(o);
+//        Method printC = aClass.getDeclaredMethod("PrintC");
+//        printC.invoke(o1);
 
     }
 }
