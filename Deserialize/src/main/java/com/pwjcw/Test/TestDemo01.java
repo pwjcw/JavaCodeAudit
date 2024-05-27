@@ -3,10 +3,7 @@ package com.pwjcw.Test;
 import com.pwjcw.entity.Persion;
 import org.junit.Test;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.*;
 
 public class TestDemo01 {
     @Test
@@ -22,5 +19,16 @@ public class TestDemo01 {
         outputStream.close();
         // 关闭文件输出流
         f.close();
+    }
+    @Test
+    public void TestUnSerialize() throws IOException, ClassNotFoundException {
+        //从文件中读取二进制字节流
+        FileInputStream fileInputStream=new FileInputStream("persion.ser");
+        //创建ObjectInputStream对象，并且传入FileInputStream读取到的二进制字节流
+        ObjectInputStream objectInputStream=new ObjectInputStream(fileInputStream);
+        //调用readObject方法，并且转换为Persion对象
+        Persion persion= (Persion) objectInputStream.readObject();
+        //打印反序列化得到的persion对象
+        System.out.println(persion);
     }
 }
