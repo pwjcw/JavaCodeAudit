@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/Reflex/pom.xml" />
         <option value="$PROJECT_DIR$/Reflex/DynamicProxy/pom.xml" />
         <option value="$PROJECT_DIR$/DynamicProxy/pom.xml" />
+        <option value="$PROJECT_DIR$/Deserialize/pom.xml" />
       </list>
     </option>
   </component>
