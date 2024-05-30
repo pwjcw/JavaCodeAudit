@@ -1,5 +1,7 @@
 package com.pwjcw.entity;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.Serializable;
 
 public class Persion implements Serializable {
@@ -36,5 +38,11 @@ public class Persion implements Serializable {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    //重定义了readObject方
+    private void readObject(java.io.ObjectInputStream objectInputStream) throws IOException, ClassNotFoundException {
+        objectInputStream.defaultReadObject();
+        Runtime.getRuntime().exec("calc.exe");
     }
 }
