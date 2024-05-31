@@ -6,6 +6,7 @@
   <version>1.0-SNAPSHOT</version>
   <name>Archetype - CommonsCollections1</name>
   <url>http://maven.apache.org</url>
+  <packaging>jar</packaging>
   <dependencies>
     <dependency>
       <groupId>commons-collections</groupId>

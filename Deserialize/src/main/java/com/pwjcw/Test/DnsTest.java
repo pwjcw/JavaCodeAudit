@@ -6,6 +6,7 @@ import java.io.*;
 import java.lang.reflect.Field;
 import java.net.*;
 import java.util.Arrays;
+import java.util.Base64;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -65,5 +66,10 @@ public class DnsTest {
         ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
         Object o = objectInputStream.readObject();
 
+    }
+    @Test
+    public void testReadFile() throws IOException {
+        FileInputStream fileInputStream=new FileInputStream("d:\\index.html");
+        System.out.println(fileInputStream.toString());
     }
 }
