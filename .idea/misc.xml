@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="MavenProjectsManager">
@@ -9,6 +10,7 @@
         <option value="$PROJECT_DIR$/DynamicProxy/pom.xml" />
         <option value="$PROJECT_DIR$/Deserialize/pom.xml" />
         <option value="$PROJECT_DIR$/CommonsCollections1/pom.xml" />
+        <option value="$PROJECT_DIR$/RMI/pom.xml" />
       </list>
     </option>
   </component>

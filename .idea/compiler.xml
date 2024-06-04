@@ -17,6 +17,7 @@
         <module name="Deserialize" />
         <module name="DynamicProxy" />
         <module name="CommonsCollections1" />
+        <module name="RMI" />
       </profile>
     </annotationProcessing>
   </component>
