@@ -15,8 +15,9 @@
         <module name="Reflex" />
         <module name="Rce" />
         <module name="Deserialize" />
-        <module name="DynamicProxy" />
         <module name="CommonsCollections1" />
+        <module name="FastjsonSerialize" />
+        <module name="DynamicProxy" />
         <module name="RMI" />
       </profile>
     </annotationProcessing>

